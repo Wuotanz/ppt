@@ -1,27 +1,20 @@
 ---
-# try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: 博士申请考核汇报ppt
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply UnoCSS classes to the current slide
+background: lasa.jpg
 class: text-center
-# https://sli.dev/features/drawing
+highlighter: shiki
+lineNumbers: false
+info: |
+ ## Slidev Starter Template
+ Presentation slides for developers.
+
+ Learn more at [Sli.dev](https://sli.dev)
 drawings:
-  persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
+ persist: false
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
+title: xgh博士申请考核
 mdc: true
-# duration of the presentation
-duration: 35min
+
 ---
 
 # 博士研究生申请考核汇报  
@@ -68,7 +61,7 @@ Thank you for your attention.
 - 全国哲学研究生学术创新论坛  
   论文二等奖（中国人民大学）
 
-- 硕士阶段课程成绩稳定，进行系统学术训练
+- 硕士阶段在系统完成宗教学与哲学相关课程训练的基础上，重点接受了规范伦理学、诠释学与证词哲学方向的科研训练，积极参与校内外学术交流。期间多次参加全国性学术会议与研究生论坛，包括第一届中国科技伦理高峰论坛、第九届中国诠释学青年论坛、2024年中国诠释学专业委员会年会等，并在中国人民大学哲学院举办的全国哲学研究生学术创新论坛中进行论文汇报并获二等奖。同时，围绕证词哲学与人工智能伦理问题开展研究，已有论文发表于学术期刊，另有英文论文进入国际期刊外审阶段，逐步形成较为清晰且稳定的研究方向。
 
 ---
 
@@ -230,13 +223,96 @@ class G,H,H1,H2,I stance;
 
 ---
 
+```mermaid
+flowchart TD
+    %% ======================
+    %% 核心问题
+    %% ======================
+    A[研究核心问题<br/>人工智能介入伦理判断后<br/>规范性如何成立]
+
+    %% ======================
+    %% 三条研究主线
+    %% ======================
+    A --> B[研究主线一<br/>AI 是否具备道德判断能力]
+    A --> C[研究主线二<br/>AI 作为道德增强工具的条件与风险]
+    A --> D[研究主线三<br/>生活伦理中的责任结构重构]
+
+    %% ======================
+    %% 第一主线：AI 道德专家论
+    %% ======================
+    B --> B1[AI 道德专家论]
+    B1 --> B2[计算反思平衡<br/>与规范正当性]
+    B2 --> B3[判断能力 vs 规范权威]
+    B3 --> B4[结论：<br/>AI 不构成道德专家]
+
+    %% ======================
+    %% 第二主线：道德增强与风险
+    %% ======================
+    C --> C1[道德认知卸载<br/>与道德增强]
+    C1 --> C2[技术辅助的合理条件]
+    C2 --> C3[伦理风险：<br/>能力退化与责任转移]
+    C3 --> C4[结论：<br/>AI 仅适合作为辅助系统]
+
+    %% ======================
+    %% 第三主线：责任结构
+    %% ======================
+    D --> D1[日常生活中的 AI 决策系统]
+    D1 --> D2[人机协作决策]
+    D2 --> D3[多主体责任结构]
+    D3 --> D4[规范框架的再调整]
+
+    %% ======================
+    %% 方法论整合
+    %% ======================
+    B4 --> E[研究方法]
+    C4 --> E
+    D4 --> E
+
+    E --> E1[规范伦理学分析]
+    E --> E2[认识论与责任理论]
+    E --> E3[技术实践的哲学反思]
+
+    %% ======================
+    %% 总体目标
+    %% ======================
+    E --> F[总体目标<br/>为 AI 伦理判断提供<br/>稳健的规范分析框架]
+
+    %% ======================
+    %% 样式定义
+    %% ======================
+    classDef core fill:#fde68a,stroke:#92400e,stroke-width:2px;
+    classDef line1 fill:#e0f2fe,stroke:#0369a1,stroke-width:1.5px;
+    classDef line2 fill:#ede9fe,stroke:#6d28d9,stroke-width:1.5px;
+    classDef line3 fill:#ffedd5,stroke:#c2410c,stroke-width:1.5px;
+    classDef conclusion fill:#fee2e2,stroke:#991b1b,stroke-width:2px;
+    classDef method fill:#dcfce7,stroke:#166534,stroke-width:1.5px;
+    classDef goal fill:#bbf7d0,stroke:#14532d,stroke-width:2px;
+
+    %% ======================
+    %% 样式应用
+    %% ======================
+    class A core
+
+    class B,B1,B2,B3 line1
+    class B4 conclusion
+
+    class C,C1,C2,C3 line2
+    class C4 conclusion
+
+    class D,D1,D2,D3 line3
+    class D4 conclusion
+
+    class E,E1,E2,E3 method
+    class F goal
+```
+
+---
+
 # 学术目标与态度
 
 - 长期从事伦理学基础问题研究  
 - 保持对技术发展的审慎态度  
 - 避免技术乐观主义与空泛规范
-
-
 
 ---
 
