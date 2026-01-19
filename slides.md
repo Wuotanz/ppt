@@ -224,84 +224,79 @@ class G,H,H1,H2,I stance;
 ---
 
 ```mermaid
-flowchart TD
+
+flowchart LR
     %% ======================
     %% 核心问题
     %% ======================
-    A[研究核心问题<br/>人工智能介入伦理判断后<br/>规范性如何成立]
+    A[研究核心问题<br/>AI 介入伦理判断后规范性如何成立]
 
     %% ======================
     %% 三条研究主线
     %% ======================
-    A --> B[研究主线一<br/>AI 是否具备道德判断能力]
-    A --> C[研究主线二<br/>AI 作为道德增强工具的条件与风险]
-    A --> D[研究主线三<br/>生活伦理中的责任结构重构]
+    A --> B
+    A --> C
+    A --> D
+
+    %% ---------- 第一主线 ----------
+    subgraph L1[研究主线一：道德判断能力]
+        B[AI 是否具备道德判断能力]
+        B --> B1[AI 道德专家论]
+        B1 --> B2[计算反思平衡与规范正当性]
+        B2 --> B3[判断能力 vs 规范权威]
+        B3 --> B4[结论：AI 不构成道德专家]
+    end
+
+    %% ---------- 第二主线 ----------
+    subgraph L2[研究主线二：道德增强]
+        C[AI 作为道德增强工具]
+        C --> C1[道德认知卸载]
+        C1 --> C2[技术辅助的合理条件]
+        C2 --> C3[能力退化与责任转移风险]
+        C3 --> C4[结论：AI 仅作为辅助系统]
+    end
+
+    %% ---------- 第三主线 ----------
+    subgraph L3[研究主线三：生活伦理]
+        D[生活伦理中的责任结构]
+        D --> D1[AI 决策系统]
+        D1 --> D2[人机协作决策]
+        D2 --> D3[多主体责任结构]
+        D3 --> D4[规范框架再调整]
+    end
 
     %% ======================
-    %% 第一主线：AI 道德专家论
+    %% 方法与目标
     %% ======================
-    B --> B1[AI 道德专家论]
-    B1 --> B2[计算反思平衡<br/>与规范正当性]
-    B2 --> B3[判断能力 vs 规范权威]
-    B3 --> B4[结论：<br/>AI 不构成道德专家]
-
-    %% ======================
-    %% 第二主线：道德增强与风险
-    %% ======================
-    C --> C1[道德认知卸载<br/>与道德增强]
-    C1 --> C2[技术辅助的合理条件]
-    C2 --> C3[伦理风险：<br/>能力退化与责任转移]
-    C3 --> C4[结论：<br/>AI 仅适合作为辅助系统]
-
-    %% ======================
-    %% 第三主线：责任结构
-    %% ======================
-    D --> D1[日常生活中的 AI 决策系统]
-    D1 --> D2[人机协作决策]
-    D2 --> D3[多主体责任结构]
-    D3 --> D4[规范框架的再调整]
-
-    %% ======================
-    %% 方法论整合
-    %% ======================
-    B4 --> E[研究方法]
+    B4 --> E
     C4 --> E
     D4 --> E
 
-    E --> E1[规范伦理学分析]
+    E[研究方法整合]
+    E --> E1[规范伦理学]
     E --> E2[认识论与责任理论]
-    E --> E3[技术实践的哲学反思]
+    E --> E3[技术实践哲学反思]
+
+    E --> F[总体目标：构建稳健的 AI 伦理规范分析框架]
 
     %% ======================
-    %% 总体目标
-    %% ======================
-    E --> F[总体目标<br/>为 AI 伦理判断提供<br/>稳健的规范分析框架]
-
-    %% ======================
-    %% 样式定义
+    %% 样式
     %% ======================
     classDef core fill:#fde68a,stroke:#92400e,stroke-width:2px;
-    classDef line1 fill:#e0f2fe,stroke:#0369a1,stroke-width:1.5px;
-    classDef line2 fill:#ede9fe,stroke:#6d28d9,stroke-width:1.5px;
-    classDef line3 fill:#ffedd5,stroke:#c2410c,stroke-width:1.5px;
+    classDef line1 fill:#e0f2fe,stroke:#0369a1;
+    classDef line2 fill:#ede9fe,stroke:#6d28d9;
+    classDef line3 fill:#ffedd5,stroke:#c2410c;
     classDef conclusion fill:#fee2e2,stroke:#991b1b,stroke-width:2px;
-    classDef method fill:#dcfce7,stroke:#166534,stroke-width:1.5px;
+    classDef method fill:#dcfce7,stroke:#166534;
     classDef goal fill:#bbf7d0,stroke:#14532d,stroke-width:2px;
 
-    %% ======================
-    %% 样式应用
-    %% ======================
     class A core
-
     class B,B1,B2,B3 line1
     class B4 conclusion
-
     class C,C1,C2,C3 line2
     class C4 conclusion
-
     class D,D1,D2,D3 line3
     class D4 conclusion
-
     class E,E1,E2,E3 method
     class F goal
 ```
